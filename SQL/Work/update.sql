@@ -1,0 +1,10 @@
+UPDATE
+	work 
+SET
+	post=(VALUE),
+	workdescription=(VALUE),
+	datestart=(VALUE),
+	dateend=(VALUE),
+	info=(VALUE)
+WHERE 
+    idpeople=(VALUE)

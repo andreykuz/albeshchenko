@@ -1,0 +1,11 @@
+UPDATE
+	education 
+SET
+	type=(VALUE),
+	study=(VALUE),
+	institution=(VALUE),
+	startdate=(VALUE),
+	endDate=(VALUE),
+	info=(VALUE),
+WHERE 
+    idpeople=(VALUE)

@@ -1,0 +1,16 @@
+SELECT 
+	idpeople, 
+	sename, 
+	name_,
+	lastname, 
+	birthplace, 
+	datebirth, 
+	inn,
+	stat,
+	golovagospod, 
+	dateofdeath,
+	reasondeath
+FROM 
+	people
+WHERE 
+	idpeople=(VALUE)

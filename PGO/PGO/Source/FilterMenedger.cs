@@ -22,13 +22,21 @@ namespace PGO.Source
         public void FiltersUpdate()
         {
             string str = "";
-            foreach (var t in Filters)
+            for (int i = 0; i < Filters.Count; i++)
             {
-                if(t.Active)
+                var t = Filters[i];
+                if (t.Active)
                     if (t.Value != "")
-                        str += " AND ( `" + t.ColumnName +  "` " + t.Value + ") ";
+                        str += " AND ( `" + t.ColumnName + "` " + t.Value + ") ";
             }
-            _bs.RowFilter = "1 = 1 " + str;
+            try
+            {
+                _bs.RowFilter = "1 = 1 " + str;
+            }
+            catch
+            {
+                _bs.RowFilter = "";
+            }
         }
                 /*    
             for (int i = 0; i < temp.Count; i++)

@@ -449,7 +449,10 @@ namespace PGO.Forms
             if(_filteres!=null&&ContainsFocus)
                 foreach (var t in _filteres.Filters)
                 {
-                    t.Body.Width = dTable.Columns[t.ColumnId].Width;
+                    if (t.ColumnId < dTable.Columns.Count)
+                    {
+                        t.Body.Width = dTable.Columns[t.ColumnId].Width;
+                    }
                 }
         }
 
